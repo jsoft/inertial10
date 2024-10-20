@@ -5,12 +5,12 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Ciudad extends Model
+class Barrio extends Model
 {
     use HasFactory;
-    protected $table = 'ciudades';
-    public function sectores()
+    protected $table = 'barrios';
+    public function localidad()
     {
-        return $this->hasMany(Localidad::class);
+        return $this->belongsTo(Localidad::class);
     }
 }
