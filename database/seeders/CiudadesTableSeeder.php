@@ -7,11 +7,13 @@ use Illuminate\Support\Facades\DB;
 
 class CiudadesTableSeeder extends Seeder
 {
+
     /**
      * Run the database seeds.
      */
     public function run(): void
     {
+
         // Crear ciudades
         $ciudades = [
             ['nombre' => 'Bogotá'],
