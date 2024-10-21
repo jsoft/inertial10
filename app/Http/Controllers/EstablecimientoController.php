@@ -10,10 +10,7 @@ class EstablecimientoController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function index()
-    {
-        $blog =
-    }
+    public function index() {}
 
     /**
      * Show the form for creating a new resource.
