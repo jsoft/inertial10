@@ -13,4 +13,8 @@ class Barrio extends Model
     {
         return $this->belongsTo(Localidad::class);
     }
+    public function establecimientos()
+    {
+        return $this->hasMany(establecimiento::class);
+    }
 }
