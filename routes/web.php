@@ -30,8 +30,20 @@ Route::middleware([
     config('jetstream.auth_session'),
     'verified',
 ])->group(function () {
-    Route::resource('/categorias', CategoriaController::class);
     Route::get('/dashboard', function () {
         return Inertia::render('Dashboard');
     })->name('dashboard');
+});
+
+Route::middleware([
+    'auth:sanctum',
+    config('jetstream.auth_session'),
+    'verified',
+])->group(function () {
+    Route::get('/Categorias', function () {
+        return Inertia::render('Categorias/Index');
+    })->name('categorias.index');
+    Route::get('/Categorias/create', function () {
+        return Inertia::render('Categorias/Create');
+    })->name('categorias.create');
 });

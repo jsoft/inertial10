@@ -31,6 +31,7 @@ class CategoriaController extends Controller
     public function store(Request $request)
     {
         $request->validate(['nombre' => 'required|string|max:255']);
+        dd($request);
         Categoria::create($request->all());
         return redirect()->route('categorias.Index');
     }

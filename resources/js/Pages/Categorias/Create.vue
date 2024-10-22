@@ -4,10 +4,10 @@
 
     <form @submit.prevent="submit">
       <div>
-        <label for="name">Nombre de la categoría:</label>
+        <label for="nombre">Nombre de la categoría:</label>
         <input
           v-model="form.name"
-          id="name"
+          id="nombre"
           type="text"
           class="form-input"
         />
@@ -17,7 +17,7 @@
       <button type="submit" class="btn-submit">Crear</button>
     </form>
 
-    <Link href="/categories" class="btn-back">Volver al listado</Link>
+    <Link href="/categorias" class="btn-back">Volver al listado</Link>
   </div>
 </template>
 
@@ -31,7 +31,7 @@ export default {
     })
 
     function submit() {
-      form.post('/categories', {
+      form.post('/categorias', {
         onSuccess: () => form.reset(),
       })
     }
